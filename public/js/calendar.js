@@ -224,7 +224,7 @@ function calendar(target) {
 		if (currentMonth === 0) {
 			currentMonth += 12;
 			currentYear -= 1;
-		} console.log("month: " + currentMonth + "| year: " + currentYear);
+		} //console.log("month: " + currentMonth + "| year: " + currentYear);
 		// redo get command
 		$.get('/api/events/'+ currentYear +'/'+ currentMonth, function(monthEvents) {
 			dynamicContent(-1, monthEvents);
@@ -239,9 +239,9 @@ function calendar(target) {
 		if (currentMonth === 13) {
 			currentMonth -= 12;
 			currentYear += 1;
-		} console.log("month: " + currentMonth + "| year: " + currentYear);
+		} //console.log("month: " + currentMonth + "| year: " + currentYear);
 		
-		console.log(currentMonth);
+		//console.log(currentMonth);
 		$.get('/api/events/'+ currentYear +'/'+ currentMonth, function(monthEvents) {
 			dynamicContent(1, monthEvents);
 		});

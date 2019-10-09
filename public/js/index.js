@@ -5,6 +5,7 @@ $(document).ready(function(){
     $("#add").unbind("click").click(function () {
 
         var dateString= $("#date").html()
+        console.log(dateString, "dateString")
         var dateValues = dateString.split(" - ")
         
         var newEvent = {
@@ -21,7 +22,7 @@ $(document).ready(function(){
             url: "/api/new-todo",
             data: newEvent
         }).then(function (data) {
-            // console.log(data)
+            console.log(data)
         });
         
     });
