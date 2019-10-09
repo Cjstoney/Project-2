@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   // -------------------------------Create a new event------------------------------
   app.post("/api/new-todo", function (req, res) {
-    console.log(req.body);
+    console.log("req.body" , req.body);
     db.Event.create({
       event: req.body.eventName,
       year: req.body.eventYear,
